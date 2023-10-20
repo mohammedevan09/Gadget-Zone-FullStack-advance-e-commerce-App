@@ -15,7 +15,7 @@ export default async function Home() {
   const blogs = await getAllBlogs({ limit: 8 })
   return (
     <>
-      <div className="grid justify-center items-center">
+      <div className="grid justify-center items-center overflow-x-hidden">
         <Landing />
         <ShopNow />
         <Categories />
