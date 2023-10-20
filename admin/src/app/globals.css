@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #0c0a26;
+  color: #cedcff;
+  box-sizing: border-box;
+  width: 100vw;
+  overflow: hidden;
+}
+
+img,
+video {
+  max-width: 105px;
+  height: auto;
+}
+
+@layer {
+  .close-menu {
+    left: -100%;
+    width: 0px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .open-menu {
+    transition: all 0.5s ease-in-out;
+    left: 0;
+  }
+
+  .previewImage > img {
+    max-width: 400px !important;
+    max-height: 400px !important;
+  }
+
+  .red-important {
+    color: #539eff !important;
+    background: black;
+    border-radius: 50%;
+  }
+
+  .red {
+    color: rgb(255, 72, 72) !important;
+  }
+
+  .green {
+    color: rgb(74, 255, 74) !important;
+  }
+
+  .ratings-important {
+    color: #ffb84d !important;
+  }
+
+  .break-word {
+    word-break: break-word !important;
+  }
+}
+
+.order-h2 {
+  border-bottom: 1px solid #a8dbff70;
+  padding: 12px;
+}
+
+.css-1cwf1nc-MuiFormControl-root-MuiTextField-root .MuiInputLabel-root:focus,
+.MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedStart.MuiInputBase-adornedEnd.css-v4u5dn-MuiInputBase-root-MuiInput-root,
+.MuiDataGrid-main.css-204u17-MuiDataGrid-main,
+.MuiTablePagination-root.css-rtrcn9-MuiTablePagination-root,
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeSmall.MuiDataGrid-sortIcon.css-ptiqhd-MuiSvgIcon-root,
+svg,
+svg:hover,
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeSmall.MuiDataGrid-sortIcon.css-ptiqhd-MuiSvgIcon-root:hover {
+  color: white !important;
+}
+
+.css-1xif2b4-MuiPopper-root-MuiDataGrid-menu .MuiDataGrid-menuList {
+  outline: 0;
+  background: black;
+  color: white !important;
+}
+
+svg.css-tj5bde-Svg {
+  color: black !important;
+}
+
+.MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+  width: 100%;
+}
+
+.MuiDataGrid-columnHeaders.MuiDataGrid-withBorderColor.css-1iyq7zh-MuiDataGrid-columnHeaders,
+.MuiDataGrid-footerContainer.MuiDataGrid-withBorderColor.css-wop1k0-MuiDataGrid-footerContainer,
+.MuiBox-root.css-1jzfrgn {
+  color: white !important;
+}
+
+.MuiDataGrid-root.MuiDataGrid-root--densityStandard.MuiDataGrid-withBorderColor.css-78d1bb {
+  color: white !important;
+  border: none;
+}
+
+.MuiDataGrid-root.MuiDataGrid-root--densityStandard.MuiDataGrid-withBorderColor.css-5wly58-MuiDataGrid-root {
+  border: none !important;
+}
+
+.MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedStart.MuiInputBase-adornedEnd.css-zrqpq1 {
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .MuiTypography-root.MuiTypography-h4.css-3bj1hv-MuiTypography-root {
+    font-size: 27px;
+  }
+  .MuiTypography-root.MuiTypography-h6.css-p9k792-MuiTypography-root {
+    font-size: 17px;
+  }
+}
+
+.MuiTablePagination-root.css-whi0l6 {
+  color: white !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(25, 17, 56);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(40, 0, 141, 0.61);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #130068;
+}
