@@ -4,7 +4,6 @@ import { Rubik, DM_Serif_Display } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Toaster } from 'react-hot-toast'
-import ClientOnly from '@/components/ClientOnly'
 
 const rubik = Rubik({ subsets: ['latin'] })
 export const dmSerifDisplay = DM_Serif_Display({
@@ -34,14 +33,14 @@ export default function RootLayout({ children }) {
         ></meta>
       </head>
       <body className={rubik.className}>
-        <ClientOnly>
+        <>
           <Toaster />
           <ReduxProvider>
             <Header />
             <>{children}</>
             <Footer />
           </ReduxProvider>
-        </ClientOnly>
+        </>
       </body>
     </html>
   )
