@@ -21,15 +21,10 @@ import { incCart, descCart, setToken } from '@/store/reducers/userReducer.jsx'
 const ProductCard = ({ item, cartItem = [], wishlist }) => {
   const [productInCart, setProductInCart] = useState(false)
   const [showLinks, setShowLinks] = useState(false)
-  const [carts, setCarts] = useState([])
   const [isWishlist, setIsWishlist] = useState(wishlist)
 
   const router = useRouter()
   const dispatch = useDispatch()
-
-  useEffect(() => {
-    setCarts(cartItem)
-  }, [cartItem])
 
   useEffect(() => {
     setProductInCart(cartItem.find((cart) => cart?.product?._id === item?._id))
@@ -91,7 +86,6 @@ const ProductCard = ({ item, cartItem = [], wishlist }) => {
     }
 
     setProductInCart(true)
-    setCarts((prevCarts) => [...prevCarts, { product: item }])
     addToCart({ prodId: item?._id }, token, handleTokenRefresh).then(() => {
       toast.success('Added to the cart!')
       dispatch(incCart())
@@ -118,9 +112,6 @@ const ProductCard = ({ item, cartItem = [], wishlist }) => {
           if (actualQuantity === 1) {
             setProductInCart(false)
             toast.success('Removed from the cart!')
-            setCarts((prevCarts) =>
-              prevCarts.filter((cart) => cart?.product?._id !== item?._id)
-            )
             dispatch(descCart())
           }
         }
@@ -177,7 +168,7 @@ const ProductCard = ({ item, cartItem = [], wishlist }) => {
   }
 
   const [iconSize, setIconSize] = useState(0)
-  const [titleLength, setTitleLength] = useState(28)
+  const [titleLength, setTitleLength] = useState(22)
 
   useEffect(() => {
     const handleResize = () => {
@@ -186,7 +177,7 @@ const ProductCard = ({ item, cartItem = [], wishlist }) => {
         setTitleLength(18)
       } else {
         setIconSize(0)
-        setTitleLength(28)
+        setTitleLength(22)
       }
     }
     handleResize()
