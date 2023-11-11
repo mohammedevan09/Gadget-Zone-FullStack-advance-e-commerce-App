@@ -1,8 +1,9 @@
+import ClientOnly from '../ClientOnly'
 import SwiperSlides from './SwiperSlides'
 
 const ShopNow = () => {
   return (
-    <>
+    <ClientOnly>
       <section className="relative w-full justify-center items-center h-full flex flex-col gap-10 bg-black">
         <SwiperSlides />
         {/* <div className="grid grid-cols-2 gap-5 justify-center items-center">
@@ -29,7 +30,7 @@ const ShopNow = () => {
                   ))} 
                 </div>*/}
       </section>
-    </>
+    </ClientOnly>
   )
 }
 

@@ -6,7 +6,7 @@ import bigScreen from '../../../public/images/landing-three.jpg'
 import smallScreen from '../../../public/images/mobile-landing.jpg'
 
 const LandingResponsiveImage = () => {
-  const [imageUrl, setImageUrl] = useState(bigScreen)
+  const [imageUrl, setImageUrl] = useState(smallScreen)
 
   useEffect(() => {
     const handleResize = () => {
