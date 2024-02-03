@@ -23,7 +23,7 @@ const Categories = async () => {
                 alt="category"
                 width={1000} // Adjust the width and height as needed
                 height={1000}
-                quality={100}
+                quality={50}
                 className="rounded-full lg:h-52 lg:w-52 sm:w-40 sm:h-40 w-24 h-24 object-cover"
               />
             </div>

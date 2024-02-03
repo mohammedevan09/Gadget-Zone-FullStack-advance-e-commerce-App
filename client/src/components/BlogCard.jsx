@@ -68,7 +68,7 @@ const BlogCard = ({ item }) => {
           alt="category"
           width={1000} // Adjust the width and height as needed
           height={1000}
-          quality={100}
+          quality={50}
           className="sm:h-72 h-44 w-full object-cover"
           onClick={() => router.push(`/blogs/${item?._id}`)}
         />

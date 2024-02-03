@@ -33,6 +33,7 @@ const LandingResponsiveImage = () => {
       height="0"
       sizes="100vw"
       alt="landing"
+      quality={85}
       className="w-full sm:h-auto h-[58vh] md:object-none object-cover"
     />
   )

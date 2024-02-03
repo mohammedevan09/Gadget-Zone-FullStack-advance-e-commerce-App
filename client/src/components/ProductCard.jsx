@@ -200,7 +200,7 @@ const ProductCard = ({ item, cartItem = [], wishlist }) => {
               alt="category"
               width={1000} // Adjust the width and height as needed
               height={1000}
-              quality={100}
+              quality={50}
               className="sm:h-72 h-44 w-full object-cover"
             />
             <div
@@ -245,7 +245,7 @@ const ProductCard = ({ item, cartItem = [], wishlist }) => {
             )}
             {/* {getDaysAgo(item?.createdAt) < 100 && ( */}
             <div
-              className={`badge badge-secondary sm:mb-0 mb-1 ${
+              className={`badge badge-secondary sm:mb-0 mb-1 text-[11px] ${
                 isNewProduct(item?.createdAt)
                   ? 'bg-fuchsia-600 border-none'
                   : 'bg-black'

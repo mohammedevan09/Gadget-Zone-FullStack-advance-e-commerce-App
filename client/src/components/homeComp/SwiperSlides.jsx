@@ -76,6 +76,7 @@ const SwiperSlides = () => {
                 height="0"
                 sizes="60vw"
                 className="lg:h-full h-full w-full object-contain"
+                quality={30}
               />
             </div>
           </SwiperSlide>

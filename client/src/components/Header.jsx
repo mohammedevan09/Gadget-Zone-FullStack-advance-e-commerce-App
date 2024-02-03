@@ -34,7 +34,7 @@ const Header = ({ className }) => {
 
   const { userInfo, token, cart } = useSelector((state) => state?.user)
 
-  console.log(userInfo)
+  // console.log(userInfo)
 
   useEffect(() => {
     const controlNavbar = () => {
