@@ -138,7 +138,7 @@ const createOrder = async (customer, data, res) => {
 
 let endpointSecret
 
-// endpointSecret = process.env.ENDPOINT_SECRET
+endpointSecret = process.env.ENDPOINT_SECRET
 
 router.post(
   '/webhook',
