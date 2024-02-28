@@ -2,6 +2,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 import express from 'express'
+import bodyParser from 'body-parser'
 import Stripe from 'stripe'
 import User from '../../models/userModel.js'
 import Order from '../../models/orderModel.js'
@@ -46,7 +47,7 @@ endpointSecret = process.env.ENDPOINT_SECRET
 
 router.post(
   '/webhook',
-  express.raw({ type: 'application/json' }),
+  bodyParser.raw({ type: 'application/json' }),
   (req, res) => {
     const sig = req.headers['stripe-signature']
 
@@ -58,9 +59,9 @@ router.post(
 
       try {
         event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret)
-        // console.log('Webhook verified', event)
+        console.log('Webhook verified', event)
       } catch (err) {
-        // console.log(`Webhook Error: ${err.message}`)
+        console.log(`Webhook Error: ${err.message}`)
         res.status(400).send(`Webhook Error: ${err.message}`)
         return
       }
