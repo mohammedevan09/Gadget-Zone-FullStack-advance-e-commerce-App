@@ -11,6 +11,7 @@ const stripe = Stripe(process.env.SECURITY_KEY)
 const router = express.Router()
 
 // Create Order
+
 const createOrder = async (customer, data, res) => {
   const Items = JSON.parse(customer.metadata.cart)
 
@@ -26,7 +27,7 @@ const createOrder = async (customer, data, res) => {
   })
 
   try {
-    const savedOrder = await newOrder.save()
+    await newOrder.save()
     let user = await User.findOne({ _id: customer.metadata.userId })
 
     if (!user) throw new Error('Cannot find User')
