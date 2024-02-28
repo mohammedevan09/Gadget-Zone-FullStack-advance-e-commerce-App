@@ -44,7 +44,7 @@ app.use('/api/color', colorRouter)
 app.use('/api/enquiry', enqRouter)
 app.use('/api/order', orderRouter)
 app.use('/api/stripe', stripeRouter)
-app.use('/', stripeWebhookRouter)
+app.use('/api/stripe', stripeWebhookRouter)
 // app.use('/api/upload', uploadRouter)
 
 app.use(notFound)
