@@ -48,7 +48,7 @@ endpointSecret = process.env.ENDPOINT_SECRET
 
 router.post(
   '/webhook',
-  bodyParser.raw({ type: 'application/json' }),
+  //   bodyParser.raw({ type: 'application/json' }),
   (req, res) => {
     const sig = req.headers['stripe-signature']
 
