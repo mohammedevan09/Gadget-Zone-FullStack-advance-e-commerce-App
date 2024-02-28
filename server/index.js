@@ -21,14 +21,15 @@ import brandRouter from './routes/brandRoutes.js'
 import couponRouter from './routes/couponRoutes.js'
 import colorRouter from './routes/colorRoutes.js'
 import enqRouter from './routes/enqRoutes.js'
-import stripeRouter from './routes/stripe.js'
+import stripeRouter from './routes/payment/stripe.js'
+import stripeWebhookRouter from './routes/payment/stripeWebhook.js'
 import orderRouter from './routes/orderRoutes.js'
 // import uploadRouter from './routes/uploadRoutes.js'
 
 dbConnect()
 app.use(morgan('dev'))
 app.use(cors())
-app.use('/api/stripe', stripeRouter)
+app.use('/', stripeWebhookRouter)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
@@ -42,6 +43,7 @@ app.use('/api/coupon', couponRouter)
 app.use('/api/color', colorRouter)
 app.use('/api/enquiry', enqRouter)
 app.use('/api/order', orderRouter)
+app.use('/api/stripe', stripeRouter)
 // app.use('/api/upload', uploadRouter)
 
 app.use(notFound)
